@@ -1,0 +1,19 @@
+@mixin btn-class(
+  $class-name: '.btn',
+  $property: 'color',
+  $color: red,
+  $property2: 'padding',
+  $padding: 13px 18px
+) {
+  #{$class-name} {
+    #{$property}: $color;
+    #{$property2}: $padding;
+  }
+}
+
+@include btn-class('.btn-primary', 'color', purple);
+@include btn-class('.btn-secondary', 'color', blue);
+@include btn-class('.btn-inverted', 'background-color', transparent);
+@include btn-class('.btn-inverted-light', 'background-color', lightgray);
+@include btn-class('.btn-tertiary', 'color', green);
+@include btn-class('.btn-text-gray', 'color', gray);

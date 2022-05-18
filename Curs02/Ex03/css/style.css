@@ -1,0 +1,31 @@
+.btn-primary {
+  color: purple;
+  padding: 13px 18px;
+}
+
+.btn-secondary {
+  color: blue;
+  padding: 13px 18px;
+}
+
+.btn-inverted {
+  background-color: transparent;
+  padding: 13px 18px;
+}
+
+.btn-inverted-light {
+  background-color: lightgray;
+  padding: 13px 18px;
+}
+
+.btn-tertiary {
+  color: green;
+  padding: 13px 18px;
+}
+
+.btn-text-gray {
+  color: gray;
+  padding: 13px 18px;
+}
+
+/*# sourceMappingURL=style.css.map */

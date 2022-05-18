@@ -1,6 +1,8 @@
 .line {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-content: center;
+  gap: 21px;
   margin: 16px 0;
 }
 
@@ -8,4 +10,33 @@
   width: 150px;
   height: 150px;
   border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+@for $i from 1 to 6 {
+  .box-#{$i} {
+    border: 0px + $i solid rgb(0, 0 + $i * 50, 0 + $i * 10);
+    background-color: rgb(255 + $i * 5, 99 + $i * 15, 71 + $i * 25);
+    color: rgb(0, 0 + $i * 10, 0 + $i * 50);
+  }
+}
+
+@for $i from 1 to 6 {
+  .box-0#{$i} {
+    width: 145px + $i * 5;
+    height: 145px + $i * 5;
+  }
+}
+
+@for $i from 1 through 5 {
+  .box-#{$i}0 {
+    @if $i % 2 != 0 {
+      background-color: gray;
+    }
+  }
 }

@@ -1,0 +1,16 @@
+.brand {
+  background-color: red;
+  color: gray;
+}
+
+.brand-inverted {
+  color: blue;
+  background-color: gray;
+}
+
+.brand-special {
+  color: gray;
+  background-color: pink;
+}
+
+/*# sourceMappingURL=style.css.map */
