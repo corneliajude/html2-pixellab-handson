@@ -9,3 +9,21 @@
   height: 150px;
   border: 1px solid #000;
 }
+
+@for $i from 1 to 10 {
+  .box-0#{$i} {
+    border-width: $i * 1px;
+  }
+}
+
+@for $i from 1 through 9 {
+  @if $i % 2 == 0 {
+    .box-#{$i} {
+      background-color: gray;
+    }
+  } @else {
+    .box-#{$i} {
+      border: 1px dotted navy;
+    }
+  }
+}
