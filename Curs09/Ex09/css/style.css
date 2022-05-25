@@ -57,3 +57,83 @@ body {
   left: 10px;
 }
 /* do not touch this */
+
+/*   coloana inversata, pozitioneaza-le in dreapta sus apoi
+seteaza flex-shrink: 2 pe primul element  */
+.flex-container-01 {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.flex-container-01 :nth-child(2) {
+  flex-shrink: 2;
+}
+
+/*  coloana, pozitioneaza-le centrat orizontal cu primul si ultimul element pe laturile superioara si inferioara
+apoi seteaza pe elementul 1 flex-shrink: 2 si pe elementul 4 flex-shrink: 3 */
+.flex-container-02 {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-container-02 :nth-child(2) {
+  flex-shrink: 2;
+}
+
+.flex-container :nth-child(5) {
+  flex-shrink: 3;
+}
+
+/*  coloana, pozitioneaza-le pe latura din stanga cu spatiu egal intre ele si
+seteaza pe al doilea element flex-shrink: 2  */
+.flex-container-03 {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.flex-container-03 :nth-of-type(2) + div {
+  flex-shrink: 2;
+}
+
+/*  coloana, centreaza-le vertical si orizontal apoi
+seteaza pe elementul 2 flex-shrink: 3 si pe elementul 3 flex-shrink: 2 */
+.flex-container-04 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container-04 :nth-child(3) {
+  flex-shrink: 3;
+}
+
+.flex-container-04 :nth-child(4) {
+  flex-shrink: 2;
+}
+
+/*  coloana inversata, pozitioneaza-le pe latura din dreapta cu spatiu egal intre ele
+ apoi seteaza flex-shrink: 2 pe elementul 3  */
+.flex-container-05 {
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.flex-container-05 :nth-of-type(3) + div {
+  flex-shrink: 2;
+}
+
+/*  coloana, centreaza-le pe orizontala cu primul si ultimul element pe laturile superioara si inferioara,
+apoi seteaza flex-shrink: 2 pe elementul 4 */
+.flex-container-06 {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-container-06 :nth-of-type(4) + div {
+  flex-shrink: 2;
+}

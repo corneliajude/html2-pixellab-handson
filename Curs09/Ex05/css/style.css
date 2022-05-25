@@ -48,3 +48,86 @@ body {
   color: #fff;
 }
 /* do not touch this */
+
+/* In cutia 1 orienteaza elementele pe coloana si pozitioneaza-le
+in coltul din dreapta jos, apoi folosind last-child pozitioneaza ultimul element pe latura din stanga  */
+.flex-container-01 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.flex-container-01 :last-child {
+  align-self: flex-start;
+}
+
+/*In cutia 2 orienteaza elementele pe coloana si pozitioneaza-le
+central pe verticala si orizontala, apoi folosind nth-of-type pozitioneaza elementul patru pe latura din dreapta */
+
+.flex-container-02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container-02 div:nth-of-type(5) {
+  align-self: flex-end;
+}
+
+/*In cutia 3 orienteaza elementele pe coloana, pozitioneaza-le
+pe latura din stanga a cutiei cu spatiu egal intre ele si marginile cutiei, apoi  intinde elementul trei */
+.flex-container-03 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.flex-container-03 > .underlay + div + div + div {
+  align-self: stretch;
+  width: auto;
+  max-width: unset;
+}
+
+/*In cutia 4 orienteaza elementele pe coloana, pozitioneaza-le
+pe latura din dreapta folosind space-between si folosind nth-child pozitioneaza ultimul element pe latura din stanga */
+.flex-container-04 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.flex-container-04 :nth-child(5) {
+  align-self: flex-start;
+}
+
+/*In cutia 5 orientaza elementele pe coloana, pozitioneaza-le
+central pe orizontala si cu spatiu intre ele pe verticala, apoi intinde elementul trei */
+.flex-container-05 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-container-05 :nth-child(4) {
+  align-self: stretch;
+  width: auto;
+  max-width: unset;
+}
+
+/*In cutia 6 orienteaza elementele pe coloana, pozitioneaza-le
+in coltul din stanga jos si pozitioneaza elementul 2 pe latura din dreapta a elementului */
+.flex-container-06 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.flex-container-06 :nth-child(3) {
+  align-self: flex-end;
+}
