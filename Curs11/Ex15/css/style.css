@@ -25,3 +25,72 @@
   background-color: lightsteelblue;
 }
 /* can't touch this 🔨 */
+
+/* Creaza un grid mobile first, centrat cu max-width: 1920 si width: 100% dupa urmatoarea matrice:
+header
+filters
+content
+sidebar
+footer
+Sidebarul este ascuns pe mobil
+Asociaza primul element cu zona header
+Asociaza al doilea element cu zona filters
+Asociaza al treilea element cu zona content
+Asociaza al patrulea element cu zona sidebar
+Asociaza al cincilea element cu zona footer
+ */
+
+.grid-container {
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+    'header'
+    'filters'
+    'content'
+    'sidebar'
+    'footer';
+}
+
+.grid-item-1 {
+  grid-area: header;
+}
+
+.grid-item-2 {
+  grid-area: filters;
+}
+
+.grid-item-3 {
+  grid-area: content;
+}
+
+.grid-item-4 {
+  grid-area: sidebar;
+  display: none;
+}
+
+.grid-item-5 {
+  grid-area: footer;
+}
+
+/* rezolutiile mai mari de 800 de pixeli, configureaza gridul dupa matricea:
+header header header
+sidebar . filters
+sidebar . content
+footer footer footer
+ */
+
+@media (min-width: 800px) {
+  .grid-container {
+    grid-template-columns: 400px 10px 1fr;
+    grid-template-areas:
+      'header header header'
+      'sidebar . filters'
+      'sidebar . content'
+      'footer footer footer';
+  }
+  .grid-item-4 {
+    display: block;
+  }
+}

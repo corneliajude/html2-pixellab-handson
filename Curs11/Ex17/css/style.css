@@ -1,0 +1,37 @@
+/* Creaza un grid cu clasa grid-container de 3 pe 3 cu celulele de 150px   */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  grid-auto-columns: 150px;
+  grid-auto-rows: 150px;
+}
+/* Creaza un element de grid care se intinde intre liniile verticale 3 si 4 si intre liniile orizontale 1 si 2 cu fundalul lightblue  */
+.grid-item-1 {
+  background-color: lightblue;
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+/* Creaza un element de grid care se intinde intre liniile verticale 8 si 10, cu fundalul lightblue */
+.grid-item-2 {
+  background-color: lightblue;
+  grid-column: 8 / 10;
+}
+/* Seteaza proprietatea grid-auto-columns cu valoarea 150px  */
+
+/* Creaza un element de grid care se intinde intre liniile verticale 2 si 3 si
+intre liniile orizontale 3 si 4 cu fundalul lightcoral */
+.grid-item-3 {
+  background-color: lightcoral;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+/* Creaza un element de grid care se intinde intre liniile verticale 2 si 3 si
+intre linile orizontale 8 si 10 cu fundalul lightcoral */
+.grid-item-4 {
+  background-color: lightcoral;
+  grid-column: 2 / 3;
+  grid-row: 8 / 10;
+}
+/* Seteaza proprietatea grid-auto-rows la valoarea 150px */
